@@ -75,20 +75,18 @@ begin
  case shift of
   4:for j:=0 to len div 2-1 do begin
    b:=d[j*2+0];
-   d[j*2+0]:=d[j*2+1];
-   d[j*2+1]:=b;
+   d[j*2+0]:= -d[j*2+1];
+   d[j*2+1]:= -b;
   end;
   5:for j:=0 to len div 2-1 do begin
    d[j*2+0]:=-d[j*2+0];
-   d[j*2+1]:= d[j*2+1];
   end;
   6:for j:=0 to len div 2-1 do begin
    b:=d[j*2+0];
-   d[j*2+0]:=-d[j*2+1];
-   d[j*2+1]:=-b;
+   d[j*2+0]:= d[j*2+1];
+   d[j*2+1]:= b;
   end;
   7:for j:=0 to len div 2-1 do begin
-   d[j*2+0]:= d[j*2+0];
    d[j*2+1]:=-d[j*2+1];
   end;
  end;
